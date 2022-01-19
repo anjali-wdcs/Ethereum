@@ -1,9 +1,14 @@
 const http = require('http');
 const server = http.createServer ((req,res) => {
+    
     // console.log(“message on server”);
     console.log(req.url, req.method);
-    res.setHeader('Content type', 'text/html');
-    res.write("Hello World!");
+    
+    // setting header
+    res.setHeader('Content-type', 'text/html');
+   
+    res.write("<p>Hello World!</p>");
+    res.write("<p>Hello Universe!</p>");
     res.end();
 });
 
